@@ -1,0 +1,72 @@
+*::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+* {
+  font-family: "Righteous", cursive;
+}
+.header .content h2 {
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  position: relative;
+}
+.header .content h2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: #fec260;
+  bottom: 0;
+  right: 0;
+  border-radius: 2px;
+  transition: height 1s;
+  border-radius: 2px;
+}
+.header .content:hover h2::before {
+  height: 70%;
+}
+.header .content h2::after {
+  content: "Bookmarker";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+}
+.formContainer {
+  border-bottom: 2px dotted rgb(0, 0, 0);
+  border-top: 2px dotted rgb(0, 0, 0);
+}
+.formContainer h3 {
+  background: linear-gradient(to right, #3ca55c, calc(50% + 1px), #b5ac49);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.form-control:focus {
+  border-color: #fec260 !important;
+  box-shadow: 0 0 0 0.25rem rgba(255, 238, 0, 0.25);
+}
+.form-control {
+  font-family: "PT Sans Caption", sans-serif;
+}
+label {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: bold;
+}
+.btn {
+  font-family: "PT Sans Caption", sans-serif;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+}
+.messageError .p1 {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 22px;
+}
+.messageError .p2 {
+  font-family: "PT Sans Caption", sans-serif;
+}
+.AlertContent{
+  width: 500px;
+}

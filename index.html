@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="image/th.jpeg" type="image/x-icon" />
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- fontfamiy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <section class="bg-danger-subtle min-vh-100 position-relative">
+    <div
+      id="alertMessage"
+      class="alertMessageLayer position-absolute bg-black bg-opacity-25 w-100 h-100 z-3 d-none d-flex align-items-center justify-content-center"
+    >
+      <div class="AlertContent bg-info-subtle shadow shadow-lg rounded-3 p-2">
+        <div
+          class="header d-flex align-items-center justify-content-between mt-2 w-100"
+        >
+          <div class="circles d-flex justify-content-around ms-2">
+            <div class="circle rounded-circle m-1 bg-danger"></div>
+            <div class="circle rounded-circle m-1 bg-warning"></div>
+            <div class="circle rounded-circle m-1 bg-success"></div>
+          </div>
+          <div class="btnx">
+            <button class="btn mx-3" id="btnExite" onclick="closeAlert()">
+              <i class="fa-solid fa-xmark fa-2x"></i>
+            </button>
+          </div>
+        </div>
+        <div class="messageError mx-2">
+          <p class="fw-semibold ms-3 p1">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <p class="p2 mx-3">
+            <i class="fa-regular fa-circle-right text-danger mx-2"></i>Site name
+            must start with Uppercase letter and contain at least 3 characters
+          </p>
+          <p class="p2 mx-3">
+            <i class="fa-regular fa-circle-right text-danger mx-2"></i>Site URL
+            must be a valid one(EX: test.com || test.gov.eg )
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center flex-column min-vh-100">
+      <div class="header d-flex align-items-center justify-content-center">
+        <div class="content">
+          <h2 class="my-3 position-relative">Bookmarker</h2>
+        </div>
+      </div>
+      <div
+        class="formContainer d-flex align-items-center justify-content-center py-3 my-4 flex-column"
+      >
+        <h3>
+          <i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h3>
+        <label for="SiteName" class="w-100 fs-5 py-2"
+          ><i class="fa-solid fa-book-bookmark"></i> Site Name</label
+        >
+        <input
+          id="SiteName"
+          type="text"
+          class="form-control mb-3 mx-5"
+          placeholder="Site Name"
+          oninput="ValidSiteName()"
+        />
+        <label for="SiteLink" class="w-100 fs-5 py-2"
+          ><i class="fa-solid fa-link"></i> Site URL</label
+        >
+        <input
+          id="SiteLink"
+          type="text"
+          class="form-control mb-3 mx-5"
+          placeholder="Site URL"
+          oninput="ValidSiteLink()"
+        />
+        <div class="btn btn-danger fw-bold py-2" onclick="AddInfo()">
+          Submit
+        </div>
+      </div>
+      <div class="tableDisplay py-3">
+        <table class="table">
+          <thead>
+            <th class="text-center">Index</th>
+            <th class="text-center">Wepsite Name</th>
+            <th class="text-center">Visit</th>
+            <th class="text-center">Delete</th>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <body>
+    <!-- js-connection -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
