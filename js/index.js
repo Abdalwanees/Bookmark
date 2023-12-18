@@ -70,7 +70,7 @@ function DeleteSite(deleteindex) {
 }
 function ValidSiteLink() {
   var url = SiteLink.value;
-  var regx = /^(((ftp|http|https):\/\/)|)[a-zA-Z]+\.?([a-z]+|)*\.(com|gov.eg)/;
+  var regx = /^(((ftp|http|https):\/\/)|)[a-zA-Z]+\.?([a-z]+|)*\.(com|gov.eg|github.io)/;
   if (url == "") {
     SiteLink.classList.remove("is-invalid");
     SiteLink.classList.remove("is-valid");
